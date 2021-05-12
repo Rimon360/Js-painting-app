@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+body {
+    background: rgb(236, 236, 236);
+    overflow-x: hidden;
+}
+
+button {
+    padding: 3px 10px 3px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+header {
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    background: rgb(0, 119, 255);
+    padding: 10px 0 10px 0;
+    box-sizing: content-box;
+
+}
+#logo {
+    display: inline-block;
+    width: 12%;
+    height: 100%;
+    margin-left: 10%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: .4s;
+    color: rgba(255, 217, 0, 0.377);
+
+}
+#logo:hover
+{
+    filter: brightness(80%);
+}
+.header-buttons {
+    padding-top: 10px;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+}
+
+.register {
+    right: 5%;
+    position: absolute;
+    background: none;
+    color: rgb(219, 218, 218);
+    border: 2px solid white;
+    font-weight: bold;
+    transition: .4s;
+    margin-top: 10px;
+}
+
+.login {
+    transition: .4s;
+    top: 10px;
+    padding: 3px 10px 3px 10px;
+    right: 20%;
+    position: absolute;
+    color: rgb(0, 174, 255);
+    background: white;
+    border: 2px solid white;
+    margin-top: 10px;
+}
+
+.register:hover {
+    color: rgb(0, 174, 255);
+    background: white;
+}
+
+.login:hover {
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+
+.new-note {
+    padding: 5;
+    height: 100%;
+    margin-top: -5px;
+}
+
+.new-note,
+.new-screenshot {
+    transition: .4s;
+    color: white;
+    background: none;
+}
+
+.new-note:hover,
+.new-screenshot:hover
+ {
+    color: rgb(226, 226, 226);
+}
+
+.new-screenshot {
+    cursor: pointer;
+}
+
+.canvas-section {
+    position: relative;
+    width: 90%;
+    min-height: 658px;
+    left: 5%;
+    top: 50px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+   background: white;
+
+}
+
+.title-div {
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+    color: rgba(68, 68, 68, 0.541);
+
+}
+
+.title-div input {
+    padding: 5px;
+    width: 30%;
+    border: 1px solid #ddd;
+    margin-right: 15%;
+}
+
+.title-div input:focus {
+    border: 1px dotted rgb(0, 183, 255);
+}
+
+.save-button,
+.share-button {
+
+    padding: 4px 15px 4px 15px;
+    background: rgb(0, 132, 255);
+    border-radius: 2px;
+    color: white;
+    transition: .4s;
+
+}
+.share-button {
+    background: rgb(15, 177, 0);
+}
+.save-button:hover {
+    background: rgb(0, 91, 175);
+}
+.share-button:hover {
+    background: rgb(12, 139, 0);
+}
+.canvas-area {
+    position: relative;
+    width: 90%;
+    height: 1193px;
+    padding: 5px;
+    left: 5%;
+    border: 1px solid #ddd;
+}
+
+.tools {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background: rgb(240, 240, 240);
+}
+
+#canvas {
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(59, 59, 59, 0.548);
+}
+
+option,
+select {
+    font-family: 'FontAwesome', 'Roboto';
+    font-size: large;
+    padding: 5px;
+
+}
+
+select {
+    width: 18%;
+    height: 35px;
+    margin-top: 2px;
+    margin-left: 3px;
+    border: 1px solid #ddd;
+    color: rgb(0, 61, 97);
+}
+
+#rectangle:before {
+    -webkit-appearance: none;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 100;
+    border: 3px solid black;
+    background: red;
+
+}
+
+.tools-buttons {
+    color: rgb(59, 59, 59);
+    margin: 5px;
+    font-size: 100%;
+
+}
+
+.permision-button {
+    position: fixed;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background: none;
+    top: 100px;
+    text-align: center;
+    color: white;
+    margin-left: -300px;
+    transition: .7s;
+}
+
+.permision-button h3 {
+    background: black;
+    padding: 5px 0 5px 0;
+}
+
+.permision-button button {
+    color: rgb(0, 110, 255);
+    width: 100%;
+    margin-top: 5px;
+    font-weight: bolder;
+    border: 2px solid rgb(0, 110, 255);
+    padding: 5px;
+    box-shadow: 0 0 10px;
+    transition: .4s;
+
+}
+
+.permision-button button:nth-child(2):hover {
+    background: rgb(0, 110, 255);
+    color: white;
+    border: 2px solid rgb(0, 170, 14);
+}
+
+.permision-button button:nth-child(3):hover {
+    background: rgba(0, 110, 255, 0.527);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(95, 95, 95);
+}
+
+.tools-buttons:focus {
+    background: rgba(104, 104, 104, 0.555);
+    border-radius: 50%;
+
+}
+
+.color-choice-button {
+
+
+    padding: 3px;
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-choice-button:hover {
+    background: rgba(0, 204, 255, 0.349);
+}
+
+.color-choice-button input[type=color] {
+    height: 35px;
+    border: 1px solid rgb(197, 196, 196);
+    cursor: pointer;
+}
+
+.color-choice-button input[type=range] {
+    -webkit-appearance: none;
+    cursor: move;
+    background: white;
+    margin-left: 20px;
+
+}
+
+#text {
+    min-width: 100px;
+    min-height: 20px;
+    width: 400px;
+    height: 40px;
+    position: fixed;
+    top: 35%;
+    left: 12%;
+    background: rgba(31, 31, 31, 0.322);
+    border: 2px dashed rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 18px;
+    display: none;
+    color: rgb(0, 0, 0);
+}
+
+.add-text {
+    position: fixed;
+    left: 0px;
+    bottom: 50%;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    width: 5%;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 255, 42, 0.952);
+    color: rgba(0, 255, 42, 0.952);
+    padding: 15px;
+    display: none;
+}
+.add-text:hover {
+    background: rgba(0, 255, 42, 0.952);
+}
+.add-text:hover i {
+    color: rgb(255, 255, 255);
+}
+.add-text i {
+    color: rgba(0, 255, 42, 0.952);
+}
+.share-section {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 668px;
+    background: rgba(0, 0, 0, 0.651);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.share-link {
+
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgb(0, 153, 255);
+    background: rgba(0, 0, 0, 0.651);
+    backdrop-filter: blur(4px);
+
+}
+
+.share-link input {
+    width: 250px;
+    padding: 10px;
+}
+
+.share-link button {
+    padding: 10px;
+    margin-left: 10px;
+    transition: .4s;
+}
+
+.share-link button:hover {
+    background: black;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    background: rgb(0, 119, 255);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.browse-image
+{
+    position:fixed;
+    width: 30%;
+    padding: 10px;
+    background: rgba(206, 206, 206, 0.705);
+    border-radius: 5px;
+    top: 40%;
+    left: 35%;
+    z-index: 100;
+    display: none;
+
+}
+
+.browse-image label
+{
+    padding: 10px 5PX 10PX 5px;
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius:5px;
+    width: 40%;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0, 125, 228, 0.801);
+    color: rgb(236, 234, 234);
+    float: left;
+}
+
+.browse-image label:hover
+{
+    background: rgba(0, 125, 228, 0.658);    
+}
+
+.browse-image h1
+{
+    margin-left: 50px;
+    float: left;
+    margin-top: -5px;
+    color: rgb(104, 102, 102);
+    
+}
+.browse-image p
+{
+    display: inline-block;
+    margin-left: 15%;
+    font-size: 13px;
+    color: rgb(104, 102, 102);
+
+}
